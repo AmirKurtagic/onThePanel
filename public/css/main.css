@@ -1,0 +1,512 @@
+:root {
+    --lightGrey: rgb(230, 236, 240);
+    --spacing: 15px;
+    --greyText: rgb(101, 119, 134);
+    --greyButtonText: rgb(0, 0, 0, 0.34);
+    --red: rgb(226, 34, 94);
+    --green: rgb(23, 191, 99);
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+* {
+    outline: none !important;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+nav a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+nav a:hover {
+    background-color: var(--greyText);
+    color: yellow;
+    border-radius: 50%;
+}
+
+.noResults {
+    padding-left: var(--spacing);
+    color: var(--greyText);
+}
+
+#postTextarea {
+    background-color: #dedede;
+}
+
+.wrapper>.row {
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: var(--greyButtonText);
+}
+
+button i,
+button span {
+    pointer-events: none;
+}
+
+nav a.blue {
+    color: var(--blue);
+}
+
+.mainSectionContainer {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer {
+    height: 53px;
+    padding: var(--spacing);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+    color: white;
+}
+
+.titleContainer h1 {
+    flex: 1;
+}
+
+.postFormContainer,
+.profileHeaderContainer {
+    display: flex;
+    padding: var(--spacing);
+    border-bottom: 10px solid rgb(230, 236, 240);
+    flex-shrink: 0;
+    border-left: 1px solid var(--lightGrey);
+    border-right: 1px solid var(--lightGrey);
+}
+
+.modal .postFormContainer {
+    border: none;
+    padding: 0;
+    padding-top: var(--spacing);
+}
+
+.modal .post {
+    padding: 0 0 var(--spacing) 0;
+}
+
+.textareaContainer {
+    flex: 1;
+}
+
+.textareaContainer textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 19px;
+}
+
+#submitPostButton {
+    background-color: var(--greyText);
+    color: yellow;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 15px;
+    margin-top: 9px;
+}
+
+#submitPostButton:disabled {
+    background-color: #dedede;
+    color: white;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
+    cursor: pointer;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+}
+
+.mainContentContainer {
+    flex: 1;
+    display: flex;
+}
+
+.postContentContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.username,
+.date {
+    color: var(--greyText)
+}
+
+.postContentContainer .header {
+    color: white;
+}
+
+.modal-body .header {
+    color: black;
+}
+
+.displayName {
+    font-weight: bold;
+}
+
+.postFooter {
+    display: flex;
+    align-items: center;
+}
+
+.postFooter .postButtonContainer {
+    flex: 1;
+    display: flex;
+}
+
+.postFooter .postButtonContainer button {
+    padding: 2px 5px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header a,
+.header span {
+    padding-right: 5px;
+}
+
+.postButtonContainer button:hover {
+    color: var(--blue);
+    border-radius: 50%;
+}
+
+.postButtonContainer button {
+    color: var(--greyText);
+}
+
+.fa-times {
+    color: var(--greyText);
+}
+
+.modal-content {
+    color: black;
+}
+
+#deletePostButton {
+    background-color: red;
+}
+
+.btn-primary {
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    border-color: transparent;
+}
+
+.postButtonContainer.red button.active {
+    color: var(--red);
+}
+
+.postButtonContainer.red button:hover {
+    color: var(--red);
+}
+
+.postButtonContainer.green button.active {
+    color: var(--green);
+}
+
+.postButtonContainer.green button:hover {
+    color: var(--green);
+}
+
+.postActionContainer {
+    color: var(--greyText);
+    margin-bottom: 5px;
+}
+
+.postActionContainer a {
+    color: rgb(175, 175, 93);
+}
+
+.postActionContainer .fa-retweet {
+    color: var(--green);
+}
+
+.value {
+    color: yellow;
+}
+
+.replyFlag {
+    margin-bottom: 5px;
+    color: var(--greyText);
+}
+
+.replyFlag a {
+    color: rgb(175, 175, 93);
+}
+
+
+.post.largeFont .postBody,
+.post.largeFont .postFooter {
+    font-size: 23px;
+}
+
+.postContentContainer .header {
+    display: flex;
+}
+
+.postContentContainer .header .date {
+    flex: 1;
+}
+
+.notAvailable {
+    border: 0.05px solid #b8abab;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: rgba(197, 201, 197, 0.15);
+}
+
+
+
+#submitReplyButton:disabled {
+    background-color: #dedede;
+    color: white;
+}
+
+#submitReplyButton {
+    background-color: var(--greyText);
+    color: yellow;
+    border: none;
+    padding: 7px 15px;
+}
+
+.errorMessage {
+    padding: var(--spacing)
+}
+
+.profileHeaderContainer .profileButtonsContainer {
+    padding-top: 15px;
+}
+
+.profileButtonsContainer {
+    width: 100%;
+}
+
+.profileHeaderContainer .profileButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    float: right;
+
+}
+
+.followButton {
+    border: 1px solid yellow;
+    color: yellow;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 60px;
+    display: inline-block;
+    margin-left: var(--spacing);
+    width: 120px;
+
+}
+
+.profileButton:hover,
+.followButton:hover {
+    background-color: var(--blueBackground);
+}
+
+.followButton.following {
+    background-color: yellow;
+    color: black;
+}
+
+.profileHeaderContainer .userDetailsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.followersContainer .value {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.followersContainer span:not(.value) {
+    color: var(--greyText)
+}
+
+.followersContainer a {
+    margin-right: 15px;
+}
+
+.followersContainer a {
+    margin-right: 15px;
+}
+
+.followersContainer a:hover {
+    border-bottom: 1px solid black;
+}
+
+.tabsContainer {
+    display: flex;
+    border-bottom: 1px solid var(--lightGrey);
+    flex-shrink: 0;
+}
+
+.tab {
+    flex: 1;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--greyText);
+    font-weight: bold;
+}
+
+.tab.active {
+    color: yellow;
+    border-bottom: 2px solid white;
+}
+
+.tab:hover {
+    color: yellow;
+    background-color: var(--greyText);
+}
+
+.notAvailable {
+    border: 0.05px solid #b8abab;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: rgba(197, 201, 197, 0.15);
+}
+
+.TextFooterRight {
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: var(--marginFooter);
+    color: var(--silverCol);
+}
+
+#TextFooterP {
+    margin: var(--spacing);
+    color: #fff;
+}
+
+.searchBarContainer {
+    position: relative;
+    color: var(--greyText);
+    padding: 10px var(--spacing);
+}
+
+.searchBarContainer i {
+    position: absolute;
+    top: 20px;
+    left: 28px;
+}
+
+.searchBarContainer #searchBox {
+    height: 36px;
+    width: 100%;
+    padding: 5px 15px 5px 40px;
+    border-radius: 50px;
+    background-color: var(--lightGrey);
+    border: none;
+    color: var(--greyText);
+}
+
+.resultsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultsContainer .user {
+    padding: var(--spacing);
+    display: flex;
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.user .userDetailsContainer {
+    flex: 1;
+}
+
+.resultListItem.active {
+    background-color: var(--greyText);
+    color: yellow;
+}
+
+.resultListItem {
+    padding: var(--spacing);
+    border-bottom: 1px solid var(--lightGrey);
+}
+
+.resultListItem.notification * {
+    pointer-events: none;
+}
+
+#markNotificationsAsRead {
+    color: white;
+}
+
+#notificationBadge {
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#notificationBadge.active {
+    visibility: visible;
+}
