@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
-const port = 3003;
 const middleware = require("./middleware");
 const path = require("path");
 const mongoose = require("./database");
 const session = require("express-session");
+
+let port = process.env.PORT;
+if (port == null || posrt == "") {
+    port = 3003
+}
 
 const server = app.listen(port, () => console.log("Server listening on port " + port));
 
