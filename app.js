@@ -6,7 +6,7 @@ const mongoose = require("./database");
 const session = require("express-session");
 
 let port = process.env.PORT;
-if (port == null || posrt == "") {
+if (port == null || port == "") {
     port = 3003
 }
 
