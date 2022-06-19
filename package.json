@@ -19,6 +19,7 @@
     "express-session": "^1.17.2",
     "mongodb": "^4.1.4",
     "mongoose": "^6.0.12",
+    "nodeenv": "^3.0.74",
     "pug": "^3.0.2"
   }
 }
