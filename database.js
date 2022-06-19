@@ -7,7 +7,7 @@ class database {
     }
 
     connect() {
-        mongoose.connect("mongodb+srv://amirkurtagic:amirkurtagic88@amirprojectdb.hqduw.mongodb.net/kurtagicDB?retryWrites=true&w=majority")
+        mongoose.connect("mongodb://username:password@host:port/database?options...")
 
             .then(() => {
                 console.log("database connection successful");
